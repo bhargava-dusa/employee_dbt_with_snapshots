@@ -11,6 +11,6 @@
     )
 }}
 
-select * from {{ source('raw_data', 'employee') }}
+select * from {{ ref('raw_data', 'employee') }}
 
 {% endsnapshot %}
