@@ -10,6 +10,6 @@
     )
 }}
 
-select * from {{ ref('employee') }}
+select * from {{ ref('transformations', '_airbyte_raw_transformed_employee') }}
 
 {% endsnapshot %}
