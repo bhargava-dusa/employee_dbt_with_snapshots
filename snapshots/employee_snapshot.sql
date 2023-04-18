@@ -10,5 +10,5 @@
     )
 }}
 
-select * from {{ source('trans', '_airbyte_raw_dest_employee') }}
+select * from {{ ref('dest_employee') }}
 {% endsnapshot %}
