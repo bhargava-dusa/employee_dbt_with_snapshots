@@ -1,6 +1,6 @@
-{{ import "dbt_utils" as utils }}
-
 {% snapshot employee_snapshot_2 %}
+
+{{ import "dbt_utils" as utils }}
 
 {{
     config(
