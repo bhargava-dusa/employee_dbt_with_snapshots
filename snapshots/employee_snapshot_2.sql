@@ -1,7 +1,5 @@
 {% snapshot employee_snapshot_2 %}
 
-{{ import "dbt_utils" as utils }}
-
 {{
     config(
       target_database='mydb',
@@ -13,13 +11,13 @@
 }}
 
 with employee_json as (
-    select _airbyte_data as employee_json from {{ source('trans', '_airbyte_raw_dest_employee') }}
+    select _airbyte_data as employee_json_column from {{ source('trans', '_airbyte_raw_dest_employee') }}
 )
 
 select 
-    utils.get_path(employee_json, 'employee_id') as employee_id,
-    utils.get_path(employee_json, 'first_name') as first_name,
-    utils.get_path(employee_json, 'last_name') as last_name
+ {{ json_extract_scalar('employee_json_column', ['employee_id'], ['employee_id']) }} as employee_id,
+ {{ json_extract_scalar('employee_json_column', ['first_name'], ['first_name']) }} as first_name,
+ {{ json_extract_scalar('employee_json_column', ['last_name'], ['last_name']) }} as last_name
 from employee_json
 
 {% endsnapshot %}
