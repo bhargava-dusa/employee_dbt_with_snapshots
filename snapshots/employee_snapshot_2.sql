@@ -1,3 +1,5 @@
+{{ import "utils" as utils }}
+
 {% snapshot employee_snapshot_2 %}
 
 {{
