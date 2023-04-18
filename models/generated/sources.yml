@@ -1,9 +1,9 @@
 version: 2
 sources:
-- name: transformations
+- name: trans
   quoting:
     database: true
     schema: false
     identifier: false
   tables:
-  - name: _airbyte_raw_transformed_employee
+  - name: _airbyte_raw_dest_employee

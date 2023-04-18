@@ -10,7 +10,7 @@ normalize:
       host: localhost
       pass: password
       port: 3000
-      schema: transformations
+      schema: trans
       threads: 8
       type: postgres
       user: postgres

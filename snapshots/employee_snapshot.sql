@@ -10,6 +10,5 @@
     )
 }}
 
-select * from {{ source('transformations', '_airbyte_raw_transformed_employee') }}
-
+select * from {{ source('trans', '_airbyte_raw_dest_employee') }}
 {% endsnapshot %}

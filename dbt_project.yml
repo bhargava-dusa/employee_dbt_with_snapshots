@@ -49,8 +49,7 @@ dispatch:
 vars:
   json_column: _airbyte_data
   models_to_source:
-    transformed_employee_ab1: transformations._airbyte_raw_transformed_employee
-    transformed_employee_ab2: transformations._airbyte_raw_transformed_employee
-    transformed_employee_stg: transformations._airbyte_raw_transformed_employee
-    transformed_employee_scd: transformations._airbyte_raw_transformed_employee
-    transformed_employee: transformations._airbyte_raw_transformed_employee
+    dest_employee_ab1: trans._airbyte_raw_dest_employee
+    dest_employee_ab2: trans._airbyte_raw_dest_employee
+    dest_employee_ab3: trans._airbyte_raw_dest_employee
+    dest_employee: trans._airbyte_raw_dest_employee
