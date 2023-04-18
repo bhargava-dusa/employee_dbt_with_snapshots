@@ -1,4 +1,4 @@
-{{ import "dbt_utils" as utils }}
+{{ import "utils" as utils }}
 
 {% snapshot employee_snapshot_2 %}
 
