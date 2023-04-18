@@ -17,7 +17,8 @@ with employee_json as (
 select 
  {{ json_extract_scalar('employee_json_column', ['employee_id'], ['employee_id']) }} as employee_id,
  {{ json_extract_scalar('employee_json_column', ['first_name'], ['first_name']) }} as first_name,
- {{ json_extract_scalar('employee_json_column', ['last_name'], ['last_name']) }} as last_name
+ {{ json_extract_scalar('employee_json_column', ['last_name'], ['last_name']) }} as last_name,
+ {{ json_extract_scalar('employee_json_column', ['updated_at'], ['updated_at']) }} as updated_at
 from employee_json
 
 {% endsnapshot %}
