@@ -12,7 +12,7 @@
 
 with employee_json as (
     select _airbyte_data as employee_json from {{ source('trans', '_airbyte_raw_dest_employee') }}
-),
+)
 
 select 
     utils.get_path(employee_json, 'employee_id') as employee_id,
